@@ -21,5 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: devise_rails5_production
+  username: devise_rails5
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
