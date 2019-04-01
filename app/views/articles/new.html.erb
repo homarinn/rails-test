@@ -1,0 +1,36 @@
+<div id="article_wrap">
+  <%= form_for(@article) do |f| %>
+    <%= f.label :title, "タイトル" %>
+    <br>
+    <%= f.text_field :title %>
+    <br>
+    <br>
+    <%= f.label :content, "記事内容" %>
+    <br>
+    <%= f.text_field :content %>
+    <br>
+    <br>
+    <%= f.submit "Create Article" %>
+  <% end %>
+  
+  
+<!--    <form action="/articles" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="WLstVOjXvqoAIqdztggVAbusYaGt6XGOjpYrjZ5lzQFgI0mEp5j6byjajMzDkqhMtJnSGQMGpFXZJSXs019oNg==">-->
+<!--  タイトル<br>-->
+<!--  <input type="text" name="article[title]" id="article_title">-->
+<!--  <br>-->
+<!--  <br>-->
+
+<!--  記事内容<br>-->
+<!--  <textarea name="article[content]" id="article_content"></textarea>-->
+<!--  <br>-->
+<!--  <br>-->
+
+<!--  <input type="submit" name="commit" value="Create Article" data-disable-with="Create Article">-->
+<!--  <br>-->
+<!--  <br>-->
+<!--</form>-->
+
+
+    
+  <div class="clear"></div>
+</div>
