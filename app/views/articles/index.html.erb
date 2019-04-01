@@ -22,11 +22,14 @@
 
     </div>
     <div id="sidebar">
-        <h2>★PV数ランキング</h2>
+      <h2>★PV数ランキング</h2>
         <ul>
           <% i = 0 %>
           <% @ranking_articles.each do |article| %>
-            <li><%= link_to article.title, article %><span><%= link_to "(#{@scores[i]}pv)", article %></span></li>
+            <li><%= link_to article.title, article %>
+            <%= link_to article do %>
+            <span>&nbsp;(<%= @scores[i] %>pv)</span>
+            <% end %></li>
           <% i += 1 %>
           <% end %>
         </ul>

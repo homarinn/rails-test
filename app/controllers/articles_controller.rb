@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   
   def set_ranking_data
     ids = REDIS.zrevrangebyscore "articles/daily/#{Date.today.to_s}", "+inf", 0, limit: [0, 3]
-    @ranking_articles = Article.where(id: ids)
+    @ranking_articles = ids.map{ |id| Article.find(id) }
     @scores =[]
     ids.each do |id|
       float = REDIS.zscore "articles/daily/#{Date.today.to_s}", id
